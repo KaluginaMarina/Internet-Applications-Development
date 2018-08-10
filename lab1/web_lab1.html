@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<title>web_lab#1</title>
+	</head>
+	<body>
+		<header>
+			<img class="vt" width="80" height="80" src="img/vt.png" alt="vt">
+			<h2 class="fio">Kalugina M.M, P3202</h2>
+		</header>
+		<table>
+
+			<tr>		
+				<td width="50%">
+					<table>
+						<tr>
+							<td height>
+								<h6 class="point">X:</h6>
+								<h6 class="count"><span id="valueX">1</span></h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="range" step="0.1" min="-3" max="5" list="rangeList" onchange="document.getElementById('valueX').innerHTML = this.value;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6 class="point">Y:</h6>
+								<h6 class="count"><span id="valueY">-1</span></h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="range" step="1" min="-5" max="3" list="rangeList" onchange="document.getElementById('valueY').innerHTML = this.value;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6 class="point">R:</h6>
+								<h6 class="count"><span id="valueR">2</span></h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="range" step="0.5" min="1" max="3" list="rangeList" onchange="document.getElementById('valueR').innerHTML = this.value;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="button"/>Check</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="50%">
+					<img src="img/img.png" alt="img">
+				</td>
+			</tr>
+		</table>	
+	</body>
+</html>

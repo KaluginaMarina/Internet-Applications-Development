@@ -1,0 +1,76 @@
+header{
+	width:100%;
+	height:85px;
+	background-color:#ead2ac;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0 0 6px;
+}
+	
+table{
+	width: 100%;
+    height: 100%
+}	
+
+.vt {
+	float:left;
+}
+.fio{
+	color:#4281A4;
+	font-size: 28px;
+	font-family:comic sans ms,cursive;		
+	float:right;
+}
+
+.point{
+	color:#4281A4;
+	font-size: 28px;
+	font-family:comic sans ms,cursive;
+	float:left;
+}
+
+.count{
+	font-family:comic sans ms,cursive;
+	color:#9CAFB7;
+	font-size:28px;
+	float:right;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	margin: 10px;
+	width: 95%;
+}
+
+/*Полоска*/
+input[type=range]::-webkit-slider-runnable-track {
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #ead2ac;
+}
+
+/*Круглешок*/
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 1px 1px 1px #000;
+	border: 1px solid #000;
+	height: 35px;
+	width: 15px;
+	border-radius: 40%/60%;
+	background: #e6b89c;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -14px;
+}
+
+.button{
+	text-decoration:none; 
+	text-align:center; 
+	padding:11px 32px; 
+	border:solid 1px #004F72; 
+	border-radius: 4px; 
+	font:18px comic sans ms,cursive; 
+	color:#ffffff; 
+	background-color:#4282a4; 
+	float:center;
+}
