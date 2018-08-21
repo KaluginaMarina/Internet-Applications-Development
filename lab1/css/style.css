@@ -15,6 +15,7 @@ table{
 .vt {
 	float:left;
 }
+
 .fio{
 	color:#4281A4;
 	font-size: 28px;
@@ -56,7 +57,7 @@ input[type=range]::-webkit-slider-thumb {
 	border: 1px solid #000;
 	height: 35px;
 	width: 15px;
-	border-radius: 40%/60%;
+	border-radius: 50%/50%;
 	background: #e6b89c;
 	cursor: pointer;
 	-webkit-appearance: none;
