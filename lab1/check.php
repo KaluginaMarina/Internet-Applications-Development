@@ -42,22 +42,22 @@
 	</tr>
 	<tr>
 		<td>
-			<h2 class="point"><?= $x ?></h2>
+			<h2 class="point"><?php echo $x ?></h2>
 		</td>
 		<td>
-			<h2 class="point"><?= $y ?></h2>
+			<h2 class="point"><?php echo $y ?></h2>
 		</td>
 		<td>
-			<h2 class="point"><?= $r ?></h2>
+			<h2 class="point"><?php echo $r ?></h2>
 		</td>
 		<td>
-			<h2 class="point"><?= $res ? "True" : "False" ?></h2>
+			<h2 class="point"><?php echo $res ? "True" : "False" ?></h2>
 		</td>
 		<td>
-			<h2 class="point"><?= $currentTime ?></h2>
+			<h2 class="point"><?php echo $currentTime ?></h2>
 		</td>
 		<td>
-			<h2 class="point"><?= number_format($time, 10, ".", "")*1000000 ?></h2>
+			<h2 class="point"><?php echo number_format($time, 10, ".", "")*1000000 ?></h2>
 		</td>
 	</tr>
 	
