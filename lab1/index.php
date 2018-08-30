@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<script type="text/javascript" src='js.js'></script>
 		<style type="text/css">
 			label {
 				font:18px comic sans ms,cursive; 
@@ -40,7 +41,7 @@
 		<table>
 			<tr>		
 				<td width="50%">
-				<form action="check.php" method="post">
+				<form id="form" action="" method="post">
 					<table>
 						<tr>
 							<td>
@@ -112,7 +113,12 @@
 						</tr>
 						<tr>
 							<td>
-								<p><input type="submit" class="button" value="Check"/></p>
+								<p><input type="submit" class="button" value="Check" id="submitButton"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id='answer'></div>
 							</td>
 						</tr>
 					</table>

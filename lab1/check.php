@@ -15,7 +15,7 @@
 			return false;
 		}
 	}
-	$res = check ($_POST['valueX'], $_POST['valueY'], $_POST['valueR']);
+	$res = check ($x, $y, $r);
 	$time = microtime(true) - $start;
 ?>
 	
