@@ -3,6 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<style type="text/css">
 			label {
@@ -39,7 +40,7 @@
 		<table>
 			<tr>		
 				<td width="50%">
-					
+				<form action="check.php" method="post">
 					<table>
 						<tr>
 							<td>
@@ -96,7 +97,7 @@
 							</td>
 							
 							<td>
-								<select name='valueR'>
+								<select name='valueR' value="-3">
 									<option>-3</option>
 									<option>-2</option>
 									<option>-1</option>
@@ -111,11 +112,12 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="#" class="button">Check</a>
+								<p><input type="submit" class="button" value="Check"/></p>
 							</td>
 						</tr>
 					</table>
 					
+				</form>	
 				</td>
 			
 				<td width="50%">
@@ -123,7 +125,7 @@
 				</td>
 			</tr>
 		</table>
-		
+	
 	</body>
 	
 </html>
