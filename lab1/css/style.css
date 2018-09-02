@@ -1,3 +1,8 @@
+body {
+	font-family:comic sans ms,cursive;
+	color:#EEEEEE;
+}
+
 header{
 	width:100%;
 	height:85px;
@@ -12,56 +17,38 @@ table{
     height: 100%
 }	
 
-.vt {
+td > img {
+    top: 120px;
+    position: absolute;	
+}
+
+header > img {
 	float:left;
 }
 
-.fio{
+#fio{
 	color:#4281A4;
-	font-size: 28px;
-	font-family:comic sans ms,cursive;		
+	font-size: 28px;		
 	float:right;
 }
 
 .point{
 	color:#4281A4;
 	font-size: 28px;
-	font-family:comic sans ms,cursive;
 	float:left;
 }
 
-.count{
-	font-family:comic sans ms,cursive;
-	color:#9CAFB7;
-	font-size:28px;
-	float:right;
+.ansPoint{
+	color:#4281A4;
+	font-size: 18px;
+	float:left;
 }
+
 
 input[type=range] {
 	-webkit-appearance: none;
 	margin: 10px;
 	width: 95%;
-}
-
-/*Полоска*/
-input[type=range]::-webkit-slider-runnable-track {
-	height: 5px;
-	cursor: pointer;
-	animate: 0.2s;
-	background: #ead2ac;
-}
-
-/*Круглешок*/
-input[type=range]::-webkit-slider-thumb {
-	box-shadow: 1px 1px 1px #000;
-	border: 1px solid #000;
-	height: 35px;
-	width: 15px;
-	border-radius: 50%/50%;
-	background: #e6b89c;
-	cursor: pointer;
-	-webkit-appearance: none;
-	margin-top: -14px;
 }
 
 .button{
@@ -70,8 +57,23 @@ input[type=range]::-webkit-slider-thumb {
 	padding:11px 32px; 
 	border:solid 1px #004F72; 
 	border-radius: 4px; 
-	font:18px comic sans ms,cursive; 
+	font-size: 18px;
+	font-family:comic sans ms,cursive;
 	color:#ffffff; 
 	background-color:#4282a4; 
 	float:center;
 }
+
+.w3-check:after{
+	content: "ಠ⌣ಠ";
+	padding-left: 50px;
+}
+
+.button:hover{
+	background-color:#226284;
+}
+
+.error {
+	color: #ff7777;
+}
+

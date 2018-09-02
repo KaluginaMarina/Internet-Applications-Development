@@ -33,9 +33,9 @@
 	<body>
 	
 		<header>
-			<img class="vt" width="80" height="80" src="img/vt.png" alt="vt">
+			<img width="80" height="80" src="img/vt.png" alt="vt">
 				
-			<h2 class="fio">Kalugina M.M, P3202</h2>
+			<h2 id="fio">Kalugina M.M, P3202</h2>
 		</header>
 		
 		<table>
@@ -48,7 +48,7 @@
 								<h2 class="point">X:</h2>
 							</td>
 							<td>
-								<p><input type="text" name="valueX" value="0"/></p>
+								<p><input type="text" name="valueX" id="text" placeholder="-3..5" value="0"/></p>
 							</td>
 						</tr>
 						<tr>
@@ -58,35 +58,35 @@
 							<td>
 						
 								<div>
-									<input class="w3-radio" type="radio" id="minus5" name="valueY" value="-5" />
+									<input class="w3-check" checked="checked" onclick="onlyOne(this)" type="checkbox" id="minus5" name="valueY" value="-5" />
 									<label for="minus5">-5</label>
 								</div>
 									<div>
-									<input class="w3-radio" type="radio" id="minus4" name="valueY" value="-5" />
+									<input class="w3-check" type="checkbox" id="minus4" onclick="onlyOne(this)" name="valueY" value="-5" />
 									<label for="minus4">-4</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="minus3" name="valueY" value="-3" />
+									<input class="w3-check" type="checkbox" id="minus3" onclick="onlyOne(this)" name="valueY" value="-3" />
 									<label for="minus3">-3</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="minus2" name="valueY" value="-1" />
+									<input class="w3-check" type="checkbox" id="minus2" onclick="onlyOne(this)" name="valueY" value="-1" />
 									<label for="minus1">-1</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="zerro" name="valueY" value="0" />
+									<input class="w3-check" type="checkbox" id="zerro" onclick="onlyOne(this)" name="valueY" value="0" />
 									<label for="zerro">0</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="plus1" name="valueY" value="1" />
+									<input class="w3-check" type="checkbox" id="plus1" onclick="onlyOne(this)" name="valueY" value="1" />
 									<label for="plus1">1</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="plus2" name="valueY" value="2" />
+									<input class="w3-check" type="checkbox" id="plus2" onclick="onlyOne(this)" name="valueY" value="2" />
 									<label for="plus2">2</label>
 								</div>
 								<div>
-									<input class="w3-radio" type="radio" id="plus3" name="valueY" value="3" />
+									<input class="w3-check" type="checkbox" id="plus3" onclick="onlyOne(this)" name="valueY" value="3" />
 									<label for="plus3">3</label>
 								</div>
 
@@ -98,7 +98,7 @@
 							</td>
 							
 							<td>
-								<select name='valueR' value="-3">
+								<select name='valueR' id='selectR' value="-3">
 									<option>-3</option>
 									<option>-2</option>
 									<option>-1</option>
@@ -113,9 +113,20 @@
 						</tr>
 						<tr>
 							<td>
+								<label class="error" id="labelX"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="error" id="labelR"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
 								<p><input type="submit" class="button" value="Check" id="submitButton"/></p>
 							</td>
 						</tr>
+						<tr>
 						<tr>
 							<td>
 								<div id='answer'></div>
