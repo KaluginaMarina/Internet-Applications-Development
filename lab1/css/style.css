@@ -77,3 +77,8 @@ input[type=range] {
 	color: #ff7777;
 }
 
+#ans {
+	border: 2px; 
+	border-collapse: collapse;
+}
+

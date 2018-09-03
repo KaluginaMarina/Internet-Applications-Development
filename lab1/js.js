@@ -1,16 +1,16 @@
 function checkForm() {
 	var error = true;
-	if (document.querySelector('#selectR').value < 0){
-		document.querySelector('#labelR').textContent = "Что-то не так с R";
+	if (document.querySelector('#selectR').value < 0 || document.querySelector('#selectR').value > 5){
+		document.querySelector('#labelR').textContent = "Радиус должен быть неотрицатлельным";
 		error = false;
 	}else{
 		document.querySelector('#labelR').textContent = "";
 	}
-	var x = Number(document.querySelector('#text').value);
-	if (isNaN(x) ||	x > 5 || x < -3) {
-		document.querySelector('#labelX').textContent = "Х долден быть числом от -3 до 5";
+	var x = Number(document.querySelector('#text').value.replace(",", "."));
+	if (isNaN(x) || x > 5 || x < -3) {
+		document.querySelector('#labelX').textContent = "Х должен быть числом от -3 до 5";
 		error = false;
-	} else{
+	} else {
 		document.querySelector('#labelX').textContent = "";
 	}
 	
@@ -33,7 +33,7 @@ function submit(e) {
 			body: formData,
 		})
 		.then(ans => ans.text())
-		.then(table => document.querySelector('#answer').insertAdjacentHTML('beforeend', table));
+		.then(table => document.querySelector('#ans').innerHTML=table);
 	}
 	return false;	
 }

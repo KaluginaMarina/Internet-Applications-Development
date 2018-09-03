@@ -129,7 +129,17 @@
 						<tr>
 						<tr>
 							<td>
-								<div id='answer'></div>
+								
+								<table id="ans" border="2px">
+									<?php
+										session_start();
+										if (!isset($_SESSION['history'])) {
+											$_SESSION['history'] = array();
+										}
+										include 'table.php';
+									?>
+								</table>
+								
 							</td>
 						</tr>
 					</table>

@@ -1,7 +1,9 @@
 <?php 
+	session_start();
+	
 	$currentTime = date("H:i:s", strtotime('-1 hour'));
 	$start = microtime(true);
-	$x = (float) $_POST['valueX'];
+	$x = (float) str_replace(",", ".", $_POST['valueX']);
 	$y = (int) $_POST['valueY'];
 	$r = (int) $_POST['valueR'];
 	function check($x, $y, $r){
@@ -9,51 +11,18 @@
 			($x <= 0 && $y <= 0 && $x*$x + $y*$y <= $r*$r) ||
 			($x <= 0 && $y >= 0 && -$x <= $r + $y);
 	}
+	if (!in_array($y, array(-5, -4, -3, -2, -1, 0, 1, 2, 3)) || !is_numeric($x) || $x < -3 || $x > 5 || !in_array($r, array( -3, -2, -1, 0, 1, 2, 3, 4, 5))) {
+		http_response_code(400);
+		return;
+	}
 	$res = check ($x, $y, $r);
 	$time = microtime(true) - $start;
+	$resultat = array($x, $y, $r, $res, $currentTime, $time);
+	if (!isset($_SESSION['history'])) {
+		$_SESSION['history'] = array();
+	}
+	
+	array_push($_SESSION['history'], $resultat);
+	
+	include "table.php";	
 ?>
-	
-<table border="1px" border-collapse="collapse" >
-	<tr>
-		<td>
-			<h2 class="ansPoint">X</h2>
-		</td>
-		<td>
-			<h2 class="ansPoint">Y</h2>
-		</td>
-		<td>
-			<h2 class="ansPoint">R</h2>
-		</td>
-		<td>
-			<h2 class="ansPoint">Result</h2>
-		</td>
-		<td>
-			<h2 class="ansPoint">Time</h2>
-		</td>
-		<td>
-			<h2 class="ansPoint">ScriptTime [us]</h2>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<h2 class="ansPoint"><?php echo $x ?></h2>
-		</td>
-		<td>
-			<h2 class="ansPoint"><?php echo $y ?></h2>
-		</td>
-		<td>
-			<h2 class="ansPoint"><?php echo $r ?></h2>
-		</td>
-		<td>
-			<h2 class="ansPoint"><?php echo $res ? "True" : "False" ?></h2>
-		</td>
-		<td>
-			<h2 class="ansPoint"><?php echo $currentTime ?></h2>
-		</td>
-		<td>
-			<h2 class="ansPoint"><?php echo number_format($time, 10, ".", "")*1000000 ?></h2>
-		</td>
-	</tr>
-	
-</table>
-<br>
